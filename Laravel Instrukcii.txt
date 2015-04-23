@@ -3,6 +3,7 @@ vtoro si instalirate https://getcomposer.org/ po vreme na instalaciqta mu davate
 sled tova v konzolata pishete teq komandi
 cd C:\xampp\htdocs\amit\SoftUni_LaravelTest // patq do papkata kadeto e proekta se kopira
 composer update
+Sled tova vlizate v proekta prez IDE-to i faila .env (namirase v glanata papka v dolnata chast) promenqte DB_DATABASE=data_b1 da e taka
 php artisan migrate
 php artisan serve
 
