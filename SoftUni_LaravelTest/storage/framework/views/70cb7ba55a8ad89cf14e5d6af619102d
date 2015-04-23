@@ -1,0 +1,19 @@
+<?php $__env->startSection('css'); ?>
+    <link rel="stylesheet" href=""/> <!-- za CSS -->
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+
+<?php if(count($name)): ?>
+    <h1>People I like</h1>
+    <ul>
+        <?php foreach($name as $n): ?>
+            <li><?php echo e($n); ?></li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consectetur debitis dolor doloremque dolorum est eveniet expedita id molestiae necessitatibus nostrum quam quasi quo, quod quos unde ut vitae voluptate.
+    </p>
+    <a href="/" class="btn btn-primary btn-n" style="margin-top: 25px;">Return</a>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('app1', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

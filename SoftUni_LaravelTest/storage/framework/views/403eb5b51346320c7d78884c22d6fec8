@@ -1,0 +1,37 @@
+<?php $__env->startSection('content'); ?>
+    <h1>Articles</h1>
+    <?php if(Auth::user()): ?>
+        <h2>User: <?php echo e(Auth::user()->name); ?></h2>
+    <?php endif; ?>
+    <hr/>
+
+        <article>
+            <?php foreach($articles as $i=>$article): ?>
+            <h2>
+                <a href="<?php echo e(action('ArticlesController@show',[$article->id])); ?>"><?php echo e($article->title); ?></a>
+            </h2>
+            <div class="body">
+                <?php echo e($article->body); ?>
+
+                <h3>Autor: <?php echo e($authors[$i]); ?></h3>
+
+            </div>
+            <?php endforeach; ?>
+            <?php /*<?php foreach($authors as $autor): ?>*/ ?>
+                <?php /*<h3>Autor: <?php echo e($autor); ?></h3>*/ ?>
+                <?php /*<?php endforeach; ?>*/ ?>
+        </article>
+
+
+    <?php if(Auth::user()): ?>
+        <a href="/articles/create" class="btn btn-primary btn-lg" style="margin-top: 25px;">Create an Article</a>
+        <a href="/auth/logout" class="btn btn-primary btn-lg" style="margin-top: 25px;">Logout</a>
+    <?php else: ?>
+        <a href="/auth/login" class="btn btn-primary btn-lg" style="margin-top: 25px;">Login</a>
+        <a href="/auth/register" class="btn btn-primary btn-lg" style="margin-top: 25px;">Register</a>
+    <?php endif; ?>
+
+<?php $__env->stopSection(); ?>
+
+
+<?php echo $__env->make('app1', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

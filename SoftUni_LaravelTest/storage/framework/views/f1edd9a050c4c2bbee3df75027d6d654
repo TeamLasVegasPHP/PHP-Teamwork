@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <?php echo $__env->yieldContent('css'); ?>
+</head>
+<body>
+    <?php if(Session::has('flash_message')): ?>
+        <h1><?php echo e(session('flash_message')); ?></h1>
+    <?php endif; ?>
+    <div class="container">
+        <?php echo $__env->yieldContent('content'); ?>
+        <a href="/about" class="btn btn-primary btn-n" style="margin-top: 25px;">About</a>
+        <a href="/contact" class="btn btn-primary btn-n" style="margin-top: 25px;">Contact</a>
+    </div>
+
+
+</body>
+</html>

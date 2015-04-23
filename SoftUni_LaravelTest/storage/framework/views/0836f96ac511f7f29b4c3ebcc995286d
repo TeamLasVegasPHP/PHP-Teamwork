@@ -1,0 +1,13 @@
+<?php $__env->startSection('content'); ?>
+    <h1><?php echo e($article->title); ?></h1>
+    <article>
+        Content: <?php echo e($article->body); ?>
+
+    </article>
+    <br/>
+    <footer>Posted on: <?php echo e($article->published_at); ?></footer>
+    <footer>Author is: <?php echo e($author); ?></footer>
+
+    <a href="/" class="btn btn-primary btn-lg" style="margin-top: 25px;">Back to Articles</a>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('app1', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

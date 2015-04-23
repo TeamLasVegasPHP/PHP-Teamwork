@@ -1,0 +1,43 @@
+<?php $__env->startSection('content'); ?>
+    <?php echo Form::open(['url'=>'register']); ?>
+
+    <div class="form-group">
+        <?php echo Form::label('username','Username:'); ?>
+
+        <?php echo Form::text('username',null, ['class'=>'form-control']); ?>
+
+    </div>
+
+    <div class="form-group">
+        <?php echo Form::label('email','E-mail:'); ?>
+
+        <?php echo Form::text('email',null, ['class'=>'form-control']); ?>
+
+    </div>
+
+    <div class="form-group">
+        <?php echo Form::label('password','Password:'); ?>
+
+        <?php echo Form::password('password',['class'=>'form-control']); ?>
+
+    </div>
+
+    <div class="form-group">
+        <?php echo Form::submit('Register', ['class'=>'btn btn-primary form-control']); ?>
+
+        <?php echo Form::reset('Clear', ['class'=>'btn btn-primary form-control','style'=>'margin-top:10px']); ?>
+
+    </div>
+    <?php echo Form::close(); ?>
+
+    <a href="/amit/SoftUni_LaravelTest/public/articles" class="btn btn-primary btn-lg" style="margin-top: 25px;">Return to Articles</a>
+
+    <?php if($errors->any()): ?>
+        <ul class="alert alert-danger">
+            <?php foreach($errors->all() as $error): ?>
+                <li><?php echo e($error); ?></li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('app1', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,8 @@
+<?php $__env->startSection('content'); ?>
+    <div>My contatactDate is: </div>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('footer'); ?>
+    <script>alert('Done')</script>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('app1', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

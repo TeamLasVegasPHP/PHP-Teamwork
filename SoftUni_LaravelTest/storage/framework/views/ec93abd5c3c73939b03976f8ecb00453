@@ -1,0 +1,7 @@
+<?php $__env->startSection('content'); ?>
+    <h1><?php echo e($user->username); ?></h1>
+    <h2>You have register successfully</h2>
+    <a href="/amit/SoftUni_LaravelTest/public/articles" class="btn btn-primary btn-lg" style="margin-top: 25px;">Return to Articles</a>
+    <a href="/amit/SoftUni_LaravelTest/public/register" class="btn btn-primary btn-lg" style="margin-top: 25px;">Return to Register</a>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('app1', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
