@@ -1,0 +1,44 @@
+#HeaderLeftImage {
+    height: 180px;
+    width: 200px;
+    float: left;
+}
+#LogoText {
+    text-align: right;
+    width: 600px;
+    margin: 0;
+    font-family: Forte, sans-serif;
+    font-size: 4em;
+    color: black;
+}
+#HeaderRightImage{
+    height: 180px;
+    width: 200px;
+    float: right;
+}
+#MainContent {
+    background-color: #FF1493;
+	width: 100%;
+    height: 630px;
+	clear:both;
+	overflow: auto;
+}
+#ContentLeftText {
+	width: 30%;
+    height: 530px;
+	float: left;
+	padding: 20px;
+}
+#Galeri {
+	width: 60%;
+    height: 540px;
+	float: right;
+    padding: 20px;
+}
+#slide {
+    width: 90%;
+    height: 350px;
+    border: 0px;
+    border-radius: 20px;
+    margin-top: 15%;
+}
