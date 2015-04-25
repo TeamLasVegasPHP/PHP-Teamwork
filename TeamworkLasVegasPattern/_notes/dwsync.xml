@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
 <file name="Register.php" server="D:/XAMMP/htdocs/PHP_Project/" local="130742720278438910" remote="130742720270000000" />
-<file name="Login.php" server="D:/XAMMP/htdocs/PHP_Project/" local="130743844071402128" remote="130743844070000000" />
-<file name="Account.php" server="D:/XAMMP/htdocs/PHP_Project/" local="130743845533379159" remote="130743845530000000" />
+<file name="Login.php" server="D:/XAMMP/htdocs/PHP_Project/" local="130744015295314574" remote="130744015290000000" />
+<file name="Account.php" server="D:/XAMMP/htdocs/PHP_Project/" local="130743984903493576" remote="130743984900000000" />
 <file name="LogOut.php" server="D:/XAMMP/htdocs/PHP_Project/" local="130743406769414420" remote="130743406760000000" />
 <file name="Update.php" server="D:/XAMMP/htdocs/PHP_Project/" local="130743384303109358" remote="130743384300000000" />
 <file name="ForgotPassword.php" server="D:/XAMMP/htdocs/PHP_Project/" local="130743522739880546" remote="130743522730000000" />
 <file name="EMPWScript.php" server="D:/XAMMP/htdocs/PHP_Project/" local="130743520060067331" remote="130743520060000000" />
 <file name="Admin.php" server="D:/XAMMP/htdocs/PHP_Project/" local="130743817243302902" remote="130743817240000000" />
-<file name="index.php" server="D:/XAMMP/htdocs/PHP_Project/" local="130743819283700146" remote="130743819280000000" />
-<file name="AdminMenageUsers.php" server="D:/XAMMP/htdocs/PHP_Project/" local="130743846570103910" remote="130743846570000000" />
+<file name="index.php" server="D:/XAMMP/htdocs/PHP_Project/" local="130743937113936545" remote="130743937110000000" />
+<file name="AdminMenageUsers.php" server="D:/XAMMP/htdocs/PHP_Project/" local="130744032293107464" remote="130744032290000000" />
+<file name="Forum.php" server="D:/XAMMP/htdocs/PHP_Project/" local="130743990585638061" remote="130743990580000000" />
 </dwsync>

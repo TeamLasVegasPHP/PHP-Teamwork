@@ -90,13 +90,17 @@ $totalRows_User = mysql_num_rows($User);
     <meta charset="UTF-8">
     <link href="CSS/Layout.css" rel="stylesheet" type="text/css"/>
     <link href="CSS/Menu.css" rel="stylesheet" type="text/css"/>
-    <title>NewDocument</title>
+    <link href="CSS/Index.css" rel="stylesheet" type="text/css"/>
+    <title>My Account</title>
 </head>
 
 <body>
 	<div id="Holder">
     	<div id="Header">
-        	
+            <img id="HeaderLeftImage" src="images/logo.png"></img>
+            <img id="HeaderRightImage" src="images/logo.png"></img>
+            <p id="LogoText">Welcome To</p>
+            <p id="LogoText">Las Vegas</p>
         </div>
     	<div id="NavBar">
         	<nav>
@@ -104,7 +108,7 @@ $totalRows_User = mysql_num_rows($User);
                     <li><a href="index.php">Home</a></li>
                     <li><a href="Login.php">Log In</a></li>
                     <li><a href="Register.php">Sign Up</a></li>
-                    <li><a href="ForgotPassword.php">Forgot Password</a></li>
+                    <li><a href="Forum.php">Forum</a></li>
                     <li><a href="Account.php">Account</a></li>
                     <li><a href='logout_parse.php'>Logout</a>
                 </ul>
@@ -116,8 +120,10 @@ $totalRows_User = mysql_num_rows($User);
           </div>
             <div id="ContentLeft">
                 <h3><a href="Update.php">Edit Your Account</a></h3>
-                <h3><a href="AdminMenageUsers.php">Admin</a></h3>
-                <h3><a href="Admin.php">Adminnnnn</a></h3>
+                <div id="menu">
+                    <h3><a href="AdminMenageUsers.php">Admin</a></h3>
+                    <h3><a href="Admin.php">Adminnnnn</a></h3>
+                </div>
                 <h6>Other message here</h6>
         	</div>
             <div id="ContentRight">

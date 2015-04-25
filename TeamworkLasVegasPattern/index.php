@@ -26,7 +26,7 @@
                 	<li><a href="Login.php">Log In</a></li>
                     <li><a href="Register.php">Sign Up</a></li>
                     <li><a href="ForgotPassword.php">Forgot Password</a></li>
-                    <li><a href="#">Other</a></li>
+                    <li><a href="Forum.php">Forum</a></li>
                     <li><a href='logout_parse.php'>Logout</a>
                 </ul>
             </nav>
@@ -48,8 +48,10 @@
             </div>
         </div>
     	<div id="Footer">
-
+            <a>This site is distributed under the LasVegas&trade; License. If you want to contribute to it please contact us at SoftUniTeamwork&copy; official e-mail address.</a>
         </div>
     </div>
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/cAQF-F9Ua_M?autoplay=1" frameborder="0" allowfullscreen></iframe>
 </body>
 </html>
+

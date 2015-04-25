@@ -67,7 +67,8 @@ $totalRows_User = mysql_num_rows($User);
     <meta charset="UTF-8">
     <link href="CSS/Layout.css" rel="stylesheet" type="text/css"/>
     <link href="CSS/Menu.css" rel="stylesheet" type="text/css"/>
-    <title>NewDocument</title>
+    <link href="CSS/Index.css" rel="stylesheet" type="text/css"/>
+    <title>Account Update</title>
     <script src="../../SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
     <link href="../../SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
 </head>
@@ -75,7 +76,10 @@ $totalRows_User = mysql_num_rows($User);
 <body>
 <div id="Holder">
     	<div id="Header">
-        	
+            <img id="HeaderLeftImage" src="images/logo.png"></img>
+            <img id="HeaderRightImage" src="images/logo.png"></img>
+            <p id="LogoText">Welcome To</p>
+            <p id="LogoText">Las Vegas</p>
         </div>
     	<div id="NavBar">
         	<nav>
@@ -83,7 +87,7 @@ $totalRows_User = mysql_num_rows($User);
                     <li><a href="index.php">Home</a></li>
                     <li><a href="Login.php">Log In</a></li>
                     <li><a href="Register.php">Sign Up</a></li>
-                    <li><a href="ForgotPassword.php">Forgot Password</a></li>
+                    <li><a href="Forum.php">Forum</a></li>
                     <li><a href="Account.php">Account</a></li>
                     <li><a href='logout_parse.php'>Logout</a>
               </ul>
@@ -101,13 +105,12 @@ $totalRows_User = mysql_num_rows($User);
               <form action="<?php echo $editFormAction; ?>" method="POST" name="UpdateForm" id="UpdateForm">
                 <table width="600" border="0">
                   <tr>
-                    <td align="left">Account Info:<?php echo $row_User['Fname']; ?> <?php echo $row_User['Lname']; ?> | Username: <?php echo $row_User['Username']; ?></td>
+                    <td align="center"><h3>Name: <?php echo $row_User['Fname']; ?> <?php echo $row_User['Lname']; ?></h3>
+                      <h3>Username:  <?php echo $row_User['Username']; ?></h3></td>
                   </tr>
                 </table>
                 <table width="400" border="0" align="center">
-                  <tr>
-                    <td>&nbsp;</td>
-                  </tr>
+                  
                   <tr>
 <td> <span id="sprytextfield1">
                       <label for="Email"></label>
@@ -118,9 +121,7 @@ $totalRows_User = mysql_num_rows($User);
   </span></h3>
   <span><span class="textfieldRequiredMsg">A value is required.</span></span></td>
                   </tr>
-                  <tr>
-                    <td>&nbsp;</td>
-                  </tr>
+                  
                   <tr>
                     <td><h3>Password:</h3>
                       <span id="sprytextfield2">

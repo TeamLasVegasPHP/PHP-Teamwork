@@ -85,7 +85,8 @@ $totalRows_RegisterForm = mysql_num_rows($RegisterForm);
     <meta charset="UTF-8">
     <link href="CSS/Layout.css" rel="stylesheet" type="text/css"/>
     <link href="CSS/Menu.css" rel="stylesheet" type="text/css"/>
-    <title>NewDocument</title>
+    <link href="CSS/Index.css" rel="stylesheet" type="text/css"/>
+    <title>Sign Up Form</title>
     <script src="../../SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
     <link href="../../SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
 </head>
@@ -93,7 +94,10 @@ $totalRows_RegisterForm = mysql_num_rows($RegisterForm);
 <body>
 	<div id="Holder">
     	<div id="Header">
-        	
+            <img id="HeaderLeftImage" src="images/logo.png"></img>
+            <img id="HeaderRightImage" src="images/logo.png"></img>
+            <p id="LogoText">Welcome To</p>
+            <p id="LogoText">Las Vegas</p>
         </div>
     	<div id="NavBar">
         	<nav>
@@ -102,7 +106,7 @@ $totalRows_RegisterForm = mysql_num_rows($RegisterForm);
                     <li><a href="Login.php">Log In</a></li>
                     <li><a href="Register.php">Sign Up</a></li>
                     <li><a href="ForgotPassword.php">Forgot Password</a></li>
-                    <li><a href="Account.php">Account</a></li>
+                    <li><a href="Forum.php">Forum</a></li>
                     <li><a href='logout_parse.php'>Logout</a>
                 </ul>
             </nav>

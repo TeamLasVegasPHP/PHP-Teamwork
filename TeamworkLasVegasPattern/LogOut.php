@@ -58,13 +58,14 @@ $totalRows_LogOut = mysql_num_rows($LogOut);
     <meta charset="UTF-8">
     <link href="CSS/Layout.css" rel="stylesheet" type="text/css"/>
     <link href="CSS/Menu.css" rel="stylesheet" type="text/css"/>
-    <title>NewDocument</title>
+    <link href="CSS/Index.css" rel="stylesheet" type="text/css"/>
+    <title>Log Out</title>
 </head>
 
 <body> 
 	<div id="Holder">
     	<div id="Header">
-        	
+
         </div>
     	z.
     	<div id="Content">

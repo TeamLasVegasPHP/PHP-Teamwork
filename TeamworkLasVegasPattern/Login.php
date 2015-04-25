@@ -1,4 +1,3 @@
-<?php @session_start(); ?>
 <?php require_once('../../Connections/MyConnection.php'); ?>
 <?php
 if (!function_exists("GetSQLValueString")) {
@@ -35,7 +34,8 @@ $query_Login = "SELECT * FROM users";
 $Login = mysql_query($query_Login, $MyConnection) or die(mysql_error());
 $row_Login = mysql_fetch_assoc($Login);
 $totalRows_Login = mysql_num_rows($Login);
-?><?php
+?>
+<?php
 // *** Validate request to login to this site.
 if (!isset($_SESSION)) {
   session_start();
@@ -77,13 +77,17 @@ if (isset($_POST['UserName'])) {
     header("Location: ". $MM_redirectLoginFailed );
   }
 }
-?><!DOCTYPE html>
+?>
+<?php
+@session_start(); ?>
+<!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
     <link href="CSS/Layout.css" rel="stylesheet" type="text/css"/>
     <link href="CSS/Menu.css" rel="stylesheet" type="text/css"/>
-    <title>NewDocument</title>
+    <link href="CSS/Index.css" rel="stylesheet" type="text/css"/>
+    <title>Log In</title>
     <script src="../../SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
     <link href="../../SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css">
 </head>
@@ -91,7 +95,10 @@ if (isset($_POST['UserName'])) {
 <body>
 	<div id="Holder">
     	<div id="Header">
-        	
+            <img id="HeaderLeftImage" src="images/logo.png"></img>
+            <img id="HeaderRightImage" src="images/logo.png"></img>
+            <p id="LogoText">Welcome To</p>
+            <p id="LogoText">Las Vegas</p>
         </div>
     	<div id="NavBar">
         	<nav>
@@ -113,38 +120,32 @@ if (isset($_POST['UserName'])) {
                 <h6>Other message here</h6>
         	</div>
             <div id="ContentRight">
-           	  <form name="form1" method="POST" action="<?php echo $loginFormAction; ?>">
-           	    <table width="400" border="0" align="center">
+              <form action="<?php echo $loginFormAction; ?>" method="POST" name="LoginForm" id="LoginForm">
+                <table width="400" border="0" align="center">
                   <tr>
-<td><span id="sprytextfield1">
-                      <label for="UserName"></label>
-</span>
-  <h3><span>    UserName:<br>
-    <br>
-    <input name="UserName" type="text" class="StyleTextField" id="UserName">
-  </span></h3>
-  <span><span class="textfieldRequiredMsg">A value is required.</span></span></td>
+                    <td><h3>UserName:</h3>
+<p><span id="sprytextfield3">
+                        <label for="UserName"></label>
+                        <input name="UserName" type="text" class="StyleTextField" id="UserName">
+                    <span class="textfieldRequiredMsg">A value is required.</span></span></p></td>
                   </tr>
                   <tr>
-              <td><h3>Password:</h3>
-                <span id="sprytextfield2">
-                      <label for="Password"></label>
-                <input name="Password" type="Password" class="StyleTextField" id="Password">
-                    <span class="textfieldRequiredMsg">A value is required.</span></span></td>
+                    <td><h3>Password:</h3>
+<p><span id="sprytextfield4">
+                        <label for="Password"></label>
+                        <input name="Password" type="Password" class="StyleTextField" id="Password">
+                    <span class="textfieldRequiredMsg">A value is required.</span></span></p></td>
                   </tr>
                   <tr>
                     <td>&nbsp;</td>
                   </tr>
                   <tr>
                     <td><label for="LoginButton"></label>
-                    <input type="submit" name="LoginButton" id="LoginButton" value="Submit"></td>
-                  </tr>
-                  <tr>
-                    <td>&nbsp;</td>
+                    <input type="submit" name="LoginButton" id="LoginButton" value="LogIn"></td>
                   </tr>
                 </table>
               </form>
-            </div>
+          </div>
         </div>
     	<div id="Footer"></div>
     </div>
@@ -152,6 +153,8 @@ if (isset($_POST['UserName'])) {
 <!--
 var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
 var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2");
+var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3");
+var sprytextfield4 = new Spry.Widget.ValidationTextField("sprytextfield4");
 //-->
 </script>
 </body>
