@@ -1,0 +1,7 @@
+Как да си създадете базата!!!!!
+1. Create new database Name: lasvegasdata
+2. Create new table Name: users with 8 colums
+3. Следвайте опцийте за създаване на полетата по снимката > TeamworkLasVegasPattern\Connections
+
+
+Внимание!!!!! Внимавайте с малки и голями букви!!!!!!!

@@ -1,4 +1,4 @@
-<?php require_once('../../Connections/MyConnection.php'); ?>
+<?php require_once('Connections/MyConnection.php'); ?>
 <?php
 // *** Logout the current user.
 $logoutGoTo = "Login.php";
