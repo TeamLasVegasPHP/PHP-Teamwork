@@ -13,8 +13,8 @@
 <body>
 	<div id="Holder">
     	<div id="Header">
-            <img id="HeaderLeftImage" src="images/logo.png"></img>
-            <img id="HeaderRightImage" src="images/logo.png"></img>
+            <img id="HeaderLeftImage" src="images/logo.png">
+            <img id="HeaderRightImage" src="images/logo.png">
             <p id="LogoText">Welcome To</p>
             <p id="LogoText">Las Vegas</p>
         </div>

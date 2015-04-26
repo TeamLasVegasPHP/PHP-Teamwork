@@ -1,98 +1,7 @@
 <?php @session_start(); ?>
-<?php require_once('Connections/MyConnection.php'); ?><?php
-if (!function_exists("GetSQLValueString")) {
-function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
-{
-  $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
+<?php require_once('Connections/MyConnection.php'); ?>
 
-  $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
-
-  switch ($theType) {
-    case "text":
-      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-      break;    
-    case "long":
-    case "int":
-      $theValue = ($theValue != "") ? intval($theValue) : "NULL";
-      break;
-    case "double":
-      $theValue = ($theValue != "") ? "'" . doubleval($theValue) . "'" : "NULL";
-      break;
-    case "date":
-      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-      break;
-    case "defined":
-      $theValue = ($theValue != "") ? $theDefinedValue : $theNotDefinedValue;
-      break;
-  }
-  return $theValue;
-}
-}
-
-$currentPage = $_SERVER["PHP_SELF"];
-
-if ((isset($_POST['DeleteUsersHiddenField'])) && ($_POST['DeleteUsersHiddenField'] != "")) {
-  $deleteSQL = sprintf("DELETE FROM users WHERE UserID=%s",
-                       GetSQLValueString($_POST['DeleteUsersHiddenField'], "int"));
-
-  mysql_select_db($database_MyConnection, $MyConnection);
-  $Result1 = mysql_query($deleteSQL, $MyConnection) or die(mysql_error());
-
-  $deleteGoTo = "AdminMenageUsers.php";
-  if (isset($_SERVER['QUERY_STRING'])) {
-    $deleteGoTo .= (strpos($deleteGoTo, '?')) ? "&" : "?";
-    $deleteGoTo .= $_SERVER['QUERY_STRING'];
-  }
-  header(sprintf("Location: %s", $deleteGoTo));
-}
-
-$colname_User = "-1";
-if (isset($_SESSION['MM_Username'])) {
-  $colname_User = $_SESSION['MM_Username'];
-}
-mysql_select_db($database_MyConnection, $MyConnection);
-$query_User = sprintf("SELECT * FROM users WHERE Username = %s", GetSQLValueString($colname_User, "text"));
-$User = mysql_query($query_User, $MyConnection) or die(mysql_error());
-$row_User = mysql_fetch_assoc($User);
-$totalRows_User = mysql_num_rows($User);
-
-$maxRows_MenageUsers = 10;
-$pageNum_MenageUsers = 0;
-if (isset($_GET['pageNum_MenageUsers'])) {
-  $pageNum_MenageUsers = $_GET['pageNum_MenageUsers'];
-}
-$startRow_MenageUsers = $pageNum_MenageUsers * $maxRows_MenageUsers;
-
-mysql_select_db($database_MyConnection, $MyConnection);
-$query_MenageUsers = "SELECT * FROM users ORDER BY `Timestamp` DESC";
-$query_limit_MenageUsers = sprintf("%s LIMIT %d, %d", $query_MenageUsers, $startRow_MenageUsers, $maxRows_MenageUsers);
-$MenageUsers = mysql_query($query_limit_MenageUsers, $MyConnection) or die(mysql_error());
-$row_MenageUsers = mysql_fetch_assoc($MenageUsers);
-
-if (isset($_GET['totalRows_MenageUsers'])) {
-  $totalRows_MenageUsers = $_GET['totalRows_MenageUsers'];
-} else {
-  $all_MenageUsers = mysql_query($query_MenageUsers);
-  $totalRows_MenageUsers = mysql_num_rows($all_MenageUsers);
-}
-$totalPages_MenageUsers = ceil($totalRows_MenageUsers/$maxRows_MenageUsers)-1;
-
-$queryString_MenageUsers = "";
-if (!empty($_SERVER['QUERY_STRING'])) {
-  $params = explode("&", $_SERVER['QUERY_STRING']);
-  $newParams = array();
-  foreach ($params as $param) {
-    if (stristr($param, "pageNum_MenageUsers") == false && 
-        stristr($param, "totalRows_MenageUsers") == false) {
-      array_push($newParams, $param);
-    }
-  }
-  if (count($newParams) != 0) {
-    $queryString_MenageUsers = "&" . htmlentities(implode("&", $newParams));
-  }
-}
-$queryString_MenageUsers = sprintf("&totalRows_MenageUsers=%d%s", $totalRows_MenageUsers, $queryString_MenageUsers);
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
     <meta charset="UTF-8">
@@ -126,24 +35,14 @@ $queryString_MenageUsers = sprintf("&totalRows_MenageUsers=%d%s", $totalRows_Men
         	<div id="PageHeading">
             	<h1>Welcome to Las Vegas Forum</h1>
           </div>
-    <div id="ContentLeft">	
-        	  <h2>Discussions</h2>
+         <div id="ContentLeft">
 
        	  </div>
             <div id="ContentRight">
-                <table>
-                    <tr><td colspan="2">Create a new topic</td></tr>
-                    <tr><td>Title:</td><td><input type="text" name="title"><br/></td></tr>
-                    <tr><td>Content:</td><td><textarea rows="4" cols="30" ></textarea></td></tr>
-                </table>
+                <a href="post.php"><button>Post a topic</button></a>
             </div>
     	</div>
     	<div id="Footer"></div>
     </div>
 </body>
 </html>
-<?php
-mysql_free_result($User);
-
-mysql_free_result($MenageUsers);
-?>
