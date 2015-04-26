@@ -93,7 +93,7 @@ if (!empty($_SERVER['QUERY_STRING'])) {
 }
 $queryString_MenageUsers = sprintf("&totalRows_MenageUsers=%d%s", $totalRows_MenageUsers, $queryString_MenageUsers);
 ?><!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
     <meta charset="UTF-8">
     <link href="CSS/Layout.css" rel="stylesheet" type="text/css"/>
@@ -124,24 +124,18 @@ $queryString_MenageUsers = sprintf("&totalRows_MenageUsers=%d%s", $totalRows_Men
         </div>
     	<div id="Content">
         	<div id="PageHeading">
-            	<h1>Welcome to my forum!!!!!!</h1>
+            	<h1>Welcome to Las Vegas Forum</h1>
           </div>
     <div id="ContentLeft">	
         	  <h2>Discussions</h2>
-        	  <p> 01</p>
-        	  <p>02</p>
-        	  <p>03</p>
-        	  <p>04</p>
-        	  <p>05</p>
-        	  <p>06</p>
-        	  <p>07</p>
-        	  <p>08</p>
-        	  <p>09</p>
-        	  <p>10</p>
-        	  <h6>Other message here</h6>
+
        	  </div>
             <div id="ContentRight">
-
+                <table>
+                    <tr><td colspan="2">Create a new topic</td></tr>
+                    <tr><td>Title:</td><td><input type="text" name="title"><br/></td></tr>
+                    <tr><td>Content:</td><td><textarea rows="4" cols="30" ></textarea></td></tr>
+                </table>
             </div>
     	</div>
     	<div id="Footer"></div>
