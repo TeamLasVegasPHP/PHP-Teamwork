@@ -1,0 +1,104 @@
+body {
+    background: transparent url('../images/chipLV.jpg');
+    background-repeat: repeat;
+}
+header {
+    width: 70%;
+    height: 145px;
+    background-color: #D4CDD5;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#HeaderLeftImage {
+    height: 100%;
+    width: 15%;
+    float: left;
+    padding: 7px;
+}
+#LogoText {
+    width: 60%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Forte, sans-serif;
+    font-size: 4em;
+    color: black;
+
+}
+#LogoText>p {
+    padding-top: 5%;
+}
+#HeaderRightImage{
+    height: 100%;
+    width: 15%;
+    float: right;
+    padding: 7px;
+}
+.NavigationBar>ul>li {
+    display: inline-block;
+    list-style: none;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+.container {
+    background-color: #FBD097;
+    width: 70%;
+    height: 580px;
+    text-align: center;
+    overflow-y: scroll;
+}
+#abouth {
+    list-style-type: none;
+
+}
+.btn{
+    width: 130px;
+    height: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1em;
+    padding: 10px;
+}
+#RessetButon {
+    width: 210px;
+    height: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1em;
+    padding: 10px;
+}
+#eachArticle{
+    border: 1px solid white;
+    border-radius: 9px;
+    margin:10px;
+}
+#articleContent {
+    border: 1px solid #FFF;
+    width: 55%;
+    margin: 0 auto;
+    color: bisque;
+    height: 250px;
+    overflow-y: scroll;
+    padding: 5px;
+}
+#mainFooter {
+    background-color: #D4CDD5;
+    width: 70%;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+}
+.footerButton {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.panel-body{
+    background-color: bisque;
+}
+.panel-default {
+    margin: 10px;
+}

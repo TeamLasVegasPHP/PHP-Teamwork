@@ -1,7 +1,12 @@
 @extends('app1')
-
 @section('content')
-    <h1>Write a new article</h1>
+    <nav class="NavigationBar">
+        <ul>
+            <li><a href="/" class="btn btn-primary btn-lg" style="margin-top: 25px;">Return to Articles</a></li>
+            <li><a href="/auth/logout" class="btn btn-primary btn-lg" style="margin-top: 25px;">Logout</a></li>
+        </ul>
+    </nav>
+    <h1 class="article">Write a new article</h1>
 
     <hr/>
 
@@ -20,7 +25,7 @@
              {!!Form::submit('Add Article', ['class'=>'btn btn-primary form-control'])!!}
          </div>
     {!! Form::close()!!}
-    <a href="/" class="btn btn-primary btn-lg" style="margin-top: 25px;">Return to Articles</a>
+
     @if($errors->any())
         <ul class="alert alert-danger">
             @foreach($errors->all() as $error)

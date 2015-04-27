@@ -10,7 +10,8 @@ class PageController extends Controller {
     public function about(){
 
         $name = [
-            'Minka', 'Jichka', 'Stamat'
+            'Laravel', 'PHP5', 'MySQL','Bootstrap','HTML5', 'CSS3',
+            'Google.com'
         ];
         return view('pages.about',compact('name'));
     }

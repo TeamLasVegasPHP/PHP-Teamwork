@@ -1,6 +1,4 @@
-@extends('app1')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
     <nav class="NavigationBar">
         <ul>
             <li><a href="/" class="btn btn-primary btn-n" style="margin-top: 25px;">Return</a></li>
@@ -9,5 +7,7 @@
     </nav>
     <main>My contatactDate is: </main>
 
-@stop
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('app1', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
